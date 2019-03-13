@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+html{
+	background-color:rgb(8,73,128);
+}
+body{
+	margin-left:auto;
+	margin-right:auto;
+	max-width:100%;
+	min-width:640px;
+	width:100%;
+	color:rgb(255,207,149);
+}
+center{
+	margin:auto;
+	width:10%
+}
+.displayTimes{
+	float:left;
+	display:-webkit-inline-box;
+	width:100%;
+	height:54px;
+	
+	overflow:visible;
+}
+	.displayTimes p{
+		margin: 5px;
+		padding:0px;
+		border: 2px solid grey;
+		width: 15%;
+		height:40px;
+		
+	}
+a{
+	font-family: "Arial Black", sans-serif;
+	margin-bottom: 20%;
+}
+.filler{
+	visibility:hidden;
+}
+a:link{
+	color:rgb(0,0,0);
+	text-decoration: none;
+	height:99%;
+}
+a:visited{
+	color:rgb(0,0,0);
+}
+a:active{
+	color:rgb(0,0,0);
+}
+a:hover{
+	background-color:white;
+}
+header h1 {
+	color: black;
+}
+
+nav.horizontalNavigation{
+	
+	 margin-bottom:1%;
+
+
+}
+a{
+	display: block;
+	text-align:center;
+	font-size:2rem;
+	border-radius:25px;
+		border:1px solid black;
+	background-color: lightgrey;
+}
+nav.horizontalNavigation li{
+	margin: auto;
+
+	display: block;
+	
+	width:30%;
+	height:2.8rem;
+	
+}
+
+
+div.row{
+	clear:both;
+}
+div.row::after{
+	clear:both;
+	content:"";
+	display:table;
+}
+
+#rounded, #rounded>p,#rounded> h1{ 
+
+    position: relative; 
+    float: right;
+	
+}
+#rounded {
+	overflow:scroll;
+}
+.time p {
+	
+}
+.tab {
+	
+  overflow: hidden;
+  border: 1px solid #757575;
+  background-color: DDF0FF;
+  
+  margin-top:1rem;
+  width:95%;
+  
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  width:12.5%;
+  font-size:11px;
+  font-style:bold;
+  
+}
+
+#cRem {
+	 background-color: #a1e9f5;
+
+  float: left;
+  border: 2px solid black;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  width:25%;
+  font-size:11px;
+  font-style:bold;
+ 
+}
+/* Change background color of buttons on hover */
+.tab button:hover,#cRem:hover  {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active,#cRem.active {
+  background-color: #ccc;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+ background-color:#C7D9E7;
+  
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+.tab {
+	border-radius: 5px 5px 0px 0px;
+}
+
+hr {
+	float:left;
+}
+
+

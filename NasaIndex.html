@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC>
+
+<html lang="en">
+	<head>
+		<meta charset "utf-8"/>
+		<link href="all.css" rel="stylesheet">
+		<link href="index.css" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<title>NASA HUNCH</title>
+		<link rel="icon" href="images/favicon.ico">
+	</head>
+	
+	<body>
+		<header>
+			
+			<div>
+			<img src="images/logo.png" alt="NASA Project Logo"/>
+			</div>
+			
+			
+			
+			
+		</header>
+			
+		
+		
+		<div class="colRight" id = "colRight">
+		<div class="tab">
+<button id="rem" onclick="openReminders(event)">Reminders</button>
+  <button class="tablinks" onclick="openCity(event, 'CDR')">CDR</button>
+  <button class="tablinks" onclick="openCity(event, 'FE1')">FE1</button>
+  <button class="tablinks" onclick="openCity(event, 'FE2')">FE2</button>
+  <button class="tablinks" onclick="openCity(event, 'FE3')">FE3</button>
+  <button class="tablinks" onclick="openCity(event, 'TECH1')">TECH1</button>
+  <button class="tablinks" onclick="openCity(event, 'TECH2')">TECH2</button>
+  <button class="tablinks" id = "right" onclick="openCity(event, 'MCCCOORD')">MCCCOORD</button>
+</div>
+			<div id="mBain">
+			
+				<div id="mBainTime" class= "mBainTime">
+				&nbsp;
+				</div>
+				<div id="mBainTask">
+
+				</div>
+			</div>
+			
+		</div>
+		<div class="columnLeft">
+			<div class="rounded" id = "rounded">
+			
+				<div class="description">
+					<p></p>
+				</div>
+			</div>
+			<div class = "time" id = "time">
+			<h2>Reminder</h2>
+			<div class="row">
+			<button id = "cRem" onclick="showCreateReminder(event)">Toggle reminder form</button>
+			</div>
+			<p class= "timeLeft"></p>
+			
+			<button type='button' class='delete' id = 'delete'  onclick = 'deleteReminder()'>Delete Reminder</button>
+			
+			</div>
+			
+			<div class= "createReminder" id = "createReminder">
+			<form  name = "reminder" method="post">
+				<div class="row">
+					<div class="SelectionBox">
+						Reminder Name<br>
+						<input type="text" name="remindername"><br>
+					</div>
+					<div class="SelectionBox">
+						End Date and Time<br>
+						<input type="datetime-local" name="end_date_time"><br>
+					</div>
+				</div>
+			
+				<div class="row">
+					<div class="DescriptionBox">
+						Description<br>
+						<textarea name="description" rows="8" cols="50"></textarea>
+					</div>
+				</div>
+				<div class ="submit">
+				<input type = "button" onclick="saveReminder()" value = "submit">
+				<input type="reset" value="reset">
+				
+				</div>
+					
+			</form>
+		</div>
+		
+		<div class="date">
+		
+		</div>
+		</div>
+	</body>
+	
+	
+	<center>Copyright C&C</center>
+	<script src="source.js"></script>
+	<script src="reminder.js"></script>
+	
+</html>

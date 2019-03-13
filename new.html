@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    var x = $("p").position();
+    var d =  document.getElementById("hi");
+    d.style.left = (x.left+500)+'px';
+    d.style.top = (x.top)+'px';
+    alert("Top position: " + x.top + " Left position: " + x.left);
+  });
+});
+</script>
+</head>
+<body>
+<div style = "overflow:scroll">
+<p id = "hi">This is a paragraph.</p>
+<button>Return the top and left position of the p element</button>
+asdasdaasdfddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddsdffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffasddddddddddddddddddddddddddddddddddddd<br>sfdfffff
+
+</div>
+</body>
+</html>

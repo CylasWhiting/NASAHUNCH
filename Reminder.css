@@ -1,0 +1,51 @@
+div.rounded{
+	margin-top: 2rem;	
+	margin-left:1rem;
+	margin-right:1rem;
+	border-radius: 25px 25px 25px 25px;
+	border:1px solid black;
+	background-color: white;
+	color: black;
+}
+div.SelectionBox{
+	font-size: 1.4rem;
+	float: left;
+	width: 50%;
+	position: relative;
+	text-align: center;
+}
+div.descriptionBox{
+	font-size: 1.4rem;
+	float: left;
+	width:100%;
+	position: relative;
+	text-align: center;
+}
+div.submit{
+	text-align:center;
+}
+div.rounded{
+	background-color:#C7D9E7;
+}
+div.timeLeft {
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+div.Reminder{
+border: 1px black solid;
+background-color: white;
+width: 33%;
+margin-left: 35%;
+}
+p.title{
+	text-align:center;
+	font-size:1.5rem;
+}
+div img{
+	float: right;
+	height:15%;
+	width:15%;
+	padding-right:2rem;
+}
