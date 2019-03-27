@@ -1,0 +1,29 @@
+.btn{
+	background-color: Light Gray;
+	
+}
+.btn-default{
+	background-color:MediumSeaGreen;	
+	
+}
+.btn-default{
+	background-color:Green;
+}
+.btn-primary{
+	background-color:MediumSeaGreen;
+}
+.btn-success{
+	background-color:MediumSeaGreen;
+}
+.btn-info{
+	background-color:MediumSeaGreen;
+}
+.btn-warning{
+	background-color:Orange;
+}
+.btn-danger{
+	background-color:Red;
+}
+.btn-link{
+	background-color:white;
+}
