@@ -4,7 +4,7 @@
 //
 // DO NOTNOTNOT FORGET TO FILTER THE ROWS WHOSE VALUES ARE "TRUE" IN THE JSON FILE
 //
-//
+// CYLAS - PLEASE START DOCUMENTING 
 //
 
 
@@ -16,7 +16,7 @@ function time(){
 					for(var k = 0; k < end.length; k++){
 					pArr.push(parseInt($("div#"+ k + " p").attr("value")));
 					}
-		 currentTime = 1499781600000;
+		 
 		 if (pArr.length>0){
 				for (var k in pArr){
 					if (currentTime==pArr[k]){
@@ -185,11 +185,25 @@ fetch('https://cors-anywhere.herokuapp.com/http://www.hunchdesign.com/uploads/2/
 					
 					var eh =false;
 					$('#task'+(ps[arrayLength].id).substring(4)).css("height",height+"px");
-				
+				var elem=document.getElementById(ps[arrayLength].id);
+						
 					for (var x = 0; x<heightEl;x++){
+						
 						var moveDownwards=parseInt(k)+(x+1);
-						if(!(Boolean($("#"+k+ " .filler").length))&&((Boolean($("#"+k+ " .task").length)))){
-					$("<p class = 'filler'>Hello</p>").insertAfter("#"+moveDownwards+" .timeP");
+						//if(!(Boolean($("#"+k+ " .filler").length))&&((Boolean($("#"+k+ " .task").length)))){
+					//$("<p class = 'filler'>Hello</p>").insertAfter("#"+moveDownwards+" .timeP");
+					//	}
+					
+						var elementsInDiv =$("#"+moveDownwards+ " p");
+
+						var elem=document.getElementById(ps[arrayLength].id);
+						
+							var whichElement = whichChild(elem);
+						if (!(elementsInDiv[whichElement]==undefined)&&(elementsInDiv[whichElement].className=="task")){
+							var idOfElem = "#"+elementsInDiv[whichElement].id;
+							
+							$("<p class = 'filler'>Hello</p>").insertBefore($(idOfElem));
+							
 						}
 						eh = true;
 					}
@@ -246,16 +260,45 @@ fetch('https://cors-anywhere.herokuapp.com/http://www.hunchdesign.com/uploads/2/
         ];
     }
 		
-		
+	function hideReminders(){
+				document.getElementById("colRight").style.float = "none";
+					document.getElementById("colRight").style.width = "90%";
+					document.getElementById("time").style.display = "none";
+					document.getElementById("createReminder").style.display = "none";
+					buttonRem=document.getElementById("rem");
+					buttonRem.className=buttonRem.className.replace(" active", "");
+					reminderDisplayed=false;
+		}
 		
 		
 		
 		//startTime=data.activities[i].start;
 		//time(startTime);
-	
+	function hideDetails(){
+	document.getElementById("colRight").style.float = "none";
+					document.getElementById("colRight").style.width = "90%";
+					
+					$(".rounded").css("display","none");
+					$(".description").empty();
+					taskId=-1;
+					detailsDisplayed=false;	
+	}
 		
+function whichChild(elem){
+    var  i= 0;
+    while((elem=elem.previousSibling)!=null) ++i;
+    return i;
+}
 
  $(document).on('click','.task', function(event){
+	
+	
+		taskDetails(parseInt((event.target.getAttribute('id')).substring(4)));
+		
+	 
+	 });
+	 
+	 $('.task').on('tap', function(event){
 	
 	
 		taskDetails(parseInt((event.target.getAttribute('id')).substring(4)));
@@ -300,6 +343,7 @@ setInterval(time, 1000); //for reloading the items in the bar
 					
 					document.getElementById("time").style.display = "none";
 					document.getElementById("createReminder").style.display = "none";
+					
 					reminderDisplayed = false;
 					createReminderDisplayed=false;
 					detailsDisplayed=true;
@@ -311,7 +355,7 @@ setInterval(time, 1000); //for reloading the items in the bar
 					$(".rounded").css("display","none");
 					$(".description").empty();
 					taskId=-1;
-					detailsDisplayed=false;;
+					detailsDisplayed=false;
 					}
 					
 					
@@ -430,6 +474,10 @@ function openCity(evt, rank) {
 /*
 setInterval(updateTasks, 1000); //for reloading the items in the bar
 function updateTasks(){ 
+
+
+
+
 	//Date Variables
 	var date = new Date();
 	var monthCurrent = date.getMonth();
