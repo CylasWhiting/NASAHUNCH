@@ -31,8 +31,8 @@ function time(){
 var roundedSeen = document.getElementById('rounded');
 roundedSeen.style.display="none";
 
-fetch('https://cors-anywhere.herokuapp.com/http://www.hunchdesign.com/uploads/2/2/0/9/22093000/plan.json')
-//fetch('plan.json')
+//fetch('https://cors-anywhere.herokuapp.com/http://www.hunchdesign.com/uploads/2/2/0/9/22093000/plan.json')
+fetch('https://raw.githubusercontent.com/CylasWhiting/NASAHUNCH/refs/heads/master/plan.json')
 .then(res=> res.json())
 .then((data)=> {
 	
