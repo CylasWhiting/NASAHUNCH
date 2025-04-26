@@ -1,0 +1,8 @@
+Arduino Pins								MAX7219
+0									DIN
+2									LOAD
+9 (SCK)									CLK
+
+Arduino Pins								RTC
+11 (SDA)								SDA
+1									SCL
